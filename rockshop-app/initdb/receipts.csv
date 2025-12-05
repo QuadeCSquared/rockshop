@@ -1,51 +1,50 @@
-wholeseller,specimen,bulk_cost_payed,cost_kg,total_kg,retail_kg,cost_pp,total_pp,retail_pp
-Madagascar Treasures,celestite geodes-unpolished,128,17.92,7.14,95,,16,8
+Madagascar-Treasures,celestite-geodes-unpolished,128,17.92,7.14,95,,16,8
 Morocco,aragonite,60,,1.14,,1,60,222
-Madagascar,celestite geodes-unpolished,88.8,30,2.96,75,,1,109
-Madagascar,celestite geodes-polished,90.4,40,2.26,95,,3,478
-shop purchase,celestite geodes-unpolished,22.9,20,1.145,95,,1,8
-shop purchase,celestite geodes-unpolished,239,20,11.95,40,,1,8
-ABC,amy buddies,6,,,,1.5,4,35
-ABC,quartz buddies,40,,,,2,20,30
-NIMA crystaks,spiralite,100,,,,,12,180
-Tucson,pyrite suns,120,,1.5,,10,12,155
-Power of the stones,amy points (bag),50,25,2.025,,,,85
-Ita Crystals,clear quartz specimen,25,15.14,1.615,,,1,185
-Ita Crystals,clear quartz specimen,40,14.2,2.815,,,1,110
-Jair Crystals,aura qtz point cluster,17.51,46.15,0.16,300,,5,84
-Herlk,herkimer diamond,,,6,,,1,62
-Herlk,herkimer diamond,,,25.2,,,1,15
-Herlk,herkimer diamond,,,15,,,1,15
-Herlk,herkimer diamond,,,4.8,,,1,24
-Herlk,herkimer diamond,,,8,,,1,35
-Herlk,imperfect black base,,,3.2,,,1,22
-Herlk,imperfect black base,,,12.6,,,1,15
-Herlk,imperfect black base,,,16.2,,,1,11
-Herlk,imperfect black base,,,23.6,,,1,15
-Herlk,imperfect black base,,,14.3,,,1,6
-Herlk,imperfect black base,,,6.6,,,1,8
-Herlk,imperfect black base,,,7.4,,,1,18
-Herlk,imperfect black base,,,6,,,1,52
-Herlk,imperfect black base,,,5,,,1,65
-Herlk,imperfect black base,,,10.9,,,1,35
-Herlk,imperfect black base,,,10.3,,,1,25
-Herlk,imperfect black base,,,130.8,,,1,30
-Herlk,ammolite rough,,,0.199,,,1,30
-Herlk,ammolite rough,,,0.132,,,1,50
-Herlk,ammolite rough,,,0.131,,,1,30
-Herlk,ammolite rough,,,0.115,,,1,60
-korite,ammolite cabs,,,,,,2,60
-DanZ,Illinois octo fluorite,,,,,,1,80
-DanZ,Illinois octo fluorite,,,,,,1,30
-DanZ,Illinois octo fluorite,,,,,,1,161
-DanZ,Illinois octo fluorite,,,,,,1,
-DanZ,Illinois octo fluorite,,,,,,1,
-DanZ,pyrite suns,,,1.05,,,7,
+Madagascar,celestite-geodes-unpolished,88.8,30,2.96,75,,1,109
+Madagascar,celestite-geodes-polished,90.4,40,2.26,95,,3,478
+shop-purchase,celestite-geodes-unpolished,22.9,20,1.145,95,,1,8
+shop-purchase,celestite-geodes-unpolished,239,20,11.95,40,,1,8
+ABC,amy-buddies,6,,,,1.5,4,35
+ABC,quartz-buddies,40,,,,2,20,30
+NIMA-crystaks,spiralite,100,,,,,12,180
+Tucson,pyrite-suns,120,,1.5,,10,12,155
+Power-of-the-stones,amy-points-(bag),50,25,2.025,,,,85
+Ita-Crystals,clear-quartz-specimen,25,15.14,1.615,,,1,185
+Ita-Crystals,clear-quartz-specimen,40,14.2,2.815,,,1,110
+Jair-Crystals,aura-qtz-point-cluster,17.51,46.15,0.16,300,,5,84
+Herlk,herkimer-diamond,,,6,,,1,62
+Herlk,herkimer-diamond,,,25.2,,,1,15
+Herlk,herkimer-diamond,,,15,,,1,15
+Herlk,herkimer-diamond,,,4.8,,,1,24
+Herlk,herkimer-diamond,,,8,,,1,35
+Herlk,imperfect-black-base,,,3.2,,,1,22
+Herlk,imperfect-black-base,,,12.6,,,1,15
+Herlk,imperfect-black-base,,,16.2,,,1,11
+Herlk,imperfect-black-base,,,23.6,,,1,15
+Herlk,imperfect-black-base,,,14.3,,,1,6
+Herlk,imperfect-black-base,,,6.6,,,1,8
+Herlk,imperfect-black-base,,,7.4,,,1,18
+Herlk,imperfect-black-base,,,6,,,1,52
+Herlk,imperfect-black-base,,,5,,,1,65
+Herlk,imperfect-black-base,,,10.9,,,1,35
+Herlk,imperfect-black-base,,,10.3,,,1,25
+Herlk,imperfect-black-base,,,130.8,,,1,30
+Herlk,ammolite-rough,,,0.199,,,1,30
+Herlk,ammolite-rough,,,0.132,,,1,50
+Herlk,ammolite-rough,,,0.131,,,1,30
+Herlk,ammolite-rough,,,0.115,,,1,60
+korite,ammolite-cabs,,,,,,2,60
+DanZ,Illinois-octo-fluorite,,,,,,1,80
+DanZ,Illinois-octo-fluorite,,,,,,1,30
+DanZ,Illinois-octo-fluorite,,,,,,1,161
+DanZ,Illinois-octo-fluorite,,,,,,1,
+DanZ,Illinois-octo-fluorite,,,,,,1,
+DanZ,pyrite-suns,,,1.05,,,7,
 DanZ,fluorite/pyrite,56,37.33,1.5,85,,4,
-DanZ,grape agate,,,3.305,250,,8,
-DanZ,pink amy geode-argentina,,,1.235,250,,26,
-DanZ,pagoda hematite calcite,,,1.185,500,,26,
-ABC,panda calcite,42,27,1.575,200,,8,
-ABC,irradiated sugar fluorite,80,111,0.72,250,,3,
-ABC,qtz cluster,9,75,0.12,250,,1,
-ABC,malachite stalactite,,,0.715,,,1,
+DanZ,grape-agate,,,3.305,250,,8,
+DanZ,pink-amy-geode-argentina,,,1.235,250,,26,
+DanZ,pagoda-hematite-calcite,,,1.185,500,,26,
+ABC,panda-calcite,42,27,1.575,200,,8,
+ABC,irradiated-sugar-fluorite,80,111,0.72,250,,3,
+ABC,qtz-cluster,9,75,0.12,250,,1,
+ABC,malachite-stalactite,,,0.715,,,1,
