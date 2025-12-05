@@ -1,0 +1,28 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: ${MRUSER}
+      POSTGRES_PASSWORD: ${MRPASSWORD}
+      POSTGRES_DB: ${MRDATABASE}
+    volumes:
+      - db_data:/var/lib/postgresql/data
+      - ./initdb:/docker-entrypoint-initdb.d:ro
+    ports:
+      - "5432:5432"
+
+  backend:
+    build: .
+    depends_on:
+      - db
+    ports:
+      - "3000:3000"
+    volumes:
+      # Mount your project into /app; keep node_modules inside the container
+      - ./:/app
+      - /app/node_modules
+    environment:
+      NODE_ENV: development
+
+volumes:
+  db_data:

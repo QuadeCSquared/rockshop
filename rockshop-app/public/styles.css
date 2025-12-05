@@ -1,0 +1,79 @@
+/* Custom Dark Minimalist Theme with Carolina Palette */
+
+:root {
+  --carolina-blue: #74b3ceff;
+  --blue-munsell: #508991ff;
+  --prussian-blue: #172a3aff;
+  --midnight-green: #004346ff;
+  --mint: #09bc8aff;
+}
+
+body {
+  background-color: var(--prussian-blue);
+  color: var(--carolina-blue);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.navbar {
+  background-color: var(--midnight-green);
+}
+
+.nav-link {
+  color: var(--carolina-blue) !important;
+}
+
+.nav-link:hover {
+  color: var(--mint) !important;
+}
+
+h1, h2, h3, label {
+  color: var(--carolina-blue);
+}
+
+.table {
+  background-color: #1e2e3a;
+  color: var(--carolina-blue);
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #233849;
+}
+
+input, select, textarea, .form-control {
+  background-color: #254050;
+  color: var(--carolina-blue);
+  border: 1px solid var(--carolina-blue);
+}
+
+#search-name::placeholder,
+#search-weight::placeholder {
+  color: var(--carolina-blue);
+  opacity: 1; /* ensure full opacity */
+}
+
+.btn-primary {
+  background-color: var(--blue-munsell);
+  border: none;
+  color: white;
+}
+
+.btn-success {
+  background-color: var(--mint);
+  border: none;
+  color: #111;
+}
+
+.btn-primary:hover, .btn-success:hover {
+  opacity: 0.85;
+  transform: scale(1.01);
+  transition: 0.2s ease-in-out;
+}
+
+#galleryGrid img:hover {
+  transform: scale(1.03);
+  transition: 0.2s;
+}
+
+hr {
+  border-color: var(--blue-munsell);
+}
