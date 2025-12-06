@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Add Mineral</title>
+  <title>Add Receipt</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="/styles.css" rel="stylesheet">
 </head>
@@ -13,39 +13,64 @@
     <div class="collapse navbar-collapse">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link" href="index.html">Inventory</a>
+          <a class="nav-link" href="index.html">Receipts</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="add.html">Add Mineral</a>
+          <a class="nav-link active" href="add.html">Add Receipt</a>
         </li>
       </ul>
     </div>
   </nav>
 
   <main class="container mt-4">
-    <h1>Add New Mineral</h1>
-    <form id="add-mineral-form" enctype="multipart/form-data">
+    <h1>Add New Receipt</h1>
+    <form id="add-mineral-form">
       <div class="mb-3">
-        <label for="mineralName" class="form-label">Name</label>
-        <input type="text" class="form-control" id="mineralName" name="name" required>
+        <label for="wholeseller" class="form-label">Wholeseller</label>
+        <input type="text" class="form-control" id="wholeseller" name="wholeseller" required>
       </div>
+
       <div class="mb-3">
-        <label for="mineralPrice" class="form-label">Price ($)</label>
-        <input type="number" step="0.01" class="form-control" id="mineralPrice" name="price" required>
+        <label for="specimen" class="form-label">Specimen</label>
+        <input type="text" class="form-control" id="specimen" name="specimen" required>
       </div>
+
       <div class="mb-3">
-        <label for="mineralAmount" class="form-label">Amount</label>
-        <input type="number" class="form-control" id="mineralAmount" name="amount" required>
+        <label for="bulk_cost_payed" class="form-label">Bulk Cost Paid</label>
+        <input type="number" step="0.01" class="form-control" id="bulk_cost_payed" name="bulk_cost_payed">
       </div>
+
       <div class="mb-3">
-        <label for="mineralWeight" class="form-label">Weight (g)</label>
-        <input type="number" step="0.01" class="form-control" id="mineralWeight" name="weight" required>
+        <label for="cost_kg" class="form-label">Cost per kg</label>
+        <input type="number" step="0.01" class="form-control" id="cost_kg" name="cost_kg">
       </div>
+
       <div class="mb-3">
-        <label for="mineralImage" class="form-label">Product Image</label>
-        <input type="file" class="form-control" id="mineralImage" name="photo" accept="image/*">
+        <label for="total_kg" class="form-label">Total kg</label>
+        <input type="number" step="0.0001" class="form-control" id="total_kg" name="total_kg">
       </div>
-      <button class="btn btn-success" type="submit">Add Mineral</button>
+
+      <div class="mb-3">
+        <label for="retail_kg" class="form-label">Retail per kg</label>
+        <input type="number" step="0.01" class="form-control" id="retail_kg" name="retail_kg">
+      </div>
+
+      <div class="mb-3">
+        <label for="cost_pp" class="form-label">Cost per piece</label>
+        <input type="number" step="0.01" class="form-control" id="cost_pp" name="cost_pp">
+      </div>
+
+      <div class="mb-3">
+        <label for="total_pp" class="form-label">Total pieces</label>
+        <input type="number" step="1" class="form-control" id="total_pp" name="total_pp">
+      </div>
+
+      <div class="mb-3">
+        <label for="retail_pp" class="form-label">Retail per piece</label>
+        <input type="number" step="0.01" class="form-control" id="retail_pp" name="retail_pp">
+      </div>
+
+      <button class="btn btn-success" type="submit">Add Receipt</button>
     </form>
   </main>
 
