@@ -1,7 +1,7 @@
 // src/server.js
 const express = require("express");
 const path = require("path");
-const dbRoutes = require("./routes/receipts");      // was "./routes"
+const dbRoutes = require("./routes/receipts");
 const { upload } = require("./middleware/uploads");
 const { extractCombinedFeatures, euclideanDistance } =
   require("./services/features");
@@ -19,6 +19,9 @@ app.get("/receipts", dbRoutes.getReceipts);
 app.post("/receipts", dbRoutes.addReceipt);
 app.put("/receipts/:id", dbRoutes.updateReceipt);
 app.delete("/receipts/:id", dbRoutes.deleteReceipt);
+app.post("/receipts/:id/sold", dbRoutes.markSold);
+app.post("/receipts/:id/unsold", dbRoutes.markUnsold);
+app.get("/logs", dbRoutes.getLogs);
 
 // Image identification
 app.post("/identify", upload.single("photo"), async (req, res) => {

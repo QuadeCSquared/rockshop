@@ -1,14 +1,23 @@
-create table IF NOT EXISTS receipts (
-    id int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    wholeseller text DEFAULT 'default',
-    specimen text DEFAULT 'default',
-    bulk_cost_payed float DEFAULT 0.00,
-    cost_kg float DEFAULT 0.00,
-    total_kg float DEFAULT 0.00,
-    retail_kg float DEFAULT 0.00,
-    cost_pp float DEFAULT 0.00,
-    total_pp float DEFAULT 0.00,
-    retail_pp float DEFAULT 0.00
+CREATE TABLE receipts (
+    id               INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    wholeseller      TEXT,
+    specimen         TEXT,
+    bulk_cost_payed  DOUBLE PRECISION,
+    cost_kg          DOUBLE PRECISION,
+    total_kg         DOUBLE PRECISION,
+    retail_kg        DOUBLE PRECISION,
+    cost_pp          DOUBLE PRECISION,
+    total_pp         DOUBLE PRECISION,
+    retail_pp        DOUBLE PRECISION,
+    sold             BOOLEAN DEFAULT FALSE
+);
+
+CREATE TABLE logs (
+    id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    receipt_id INTEGER,
+    action TEXT NOT NULL,
+    message TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 INSERT INTO receipts (wholeseller,specimen,bulk_cost_payed,cost_kg,total_kg,retail_kg,cost_pp,total_pp,retail_pp) VALUES

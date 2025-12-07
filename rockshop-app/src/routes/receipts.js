@@ -1,4 +1,5 @@
 const { pool } = require("../services/db");
+const { logAction } = require("../services/logger"); // adjust path as needed
 
 exports.getReceipts = async (req, res) => {
   try {
@@ -10,10 +11,6 @@ exports.getReceipts = async (req, res) => {
   }
 };
 
-/**
- * POST /receipts
- * Creates a new receipt.
- */
 exports.addReceipt = async (req, res) => {
   try {
     const {
@@ -49,7 +46,11 @@ exports.addReceipt = async (req, res) => {
     ];
 
     const result = await pool.query(query, values);
-    res.status(201).json(result.rows[0]);
+    const newRow = result.rows[0];
+
+    await logAction(newRow.id, "ADD", `Added receipt for ${newRow.specimen}`);
+
+    res.status(201).json(newRow);
   } catch (err) {
     console.error("Error adding receipt:", err);
     res.status(500).send("Error adding receipt");
@@ -110,6 +111,8 @@ exports.updateReceipt = async (req, res) => {
       return res.status(404).send("Receipt not found");
     }
 
+    await logAction(id, "UPDATE", `Updated receipt ${id}`);
+
     res.json(result.rows[0]);
   } catch (err) {
     console.error("Error updating receipt:", err);
@@ -130,10 +133,88 @@ exports.deleteReceipt = async (req, res) => {
       return res.status(404).send("Receipt not found");
     }
 
+    await logAction(id, "DELETE", `Deleted receipt ${id}`);
+
     res.sendStatus(204);
   } catch (err) {
     console.error("Error deleting receipt:", err);
     res.status(500).send("Error deleting receipt");
+  }
+};
+
+exports.markSold = async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    // You can store sold=true in DB, or skip this if you don't track sold-state
+    await logAction(id, "SOLD", `Receipt ${id} marked as sold`);
+
+    res.json({ message: `Receipt ${id} marked as sold.` });
+  } catch (err) {
+    console.error("Error marking sold:", err);
+    res.status(500).send("Error marking as sold");
+  }
+};
+
+exports.getLogs = async (req, res) => {
+  try {
+    const result = await pool.query(
+      "SELECT * FROM logs ORDER BY created_at DESC LIMIT 200"
+    );
+    res.json(result.rows);
+  } catch (err) {
+    console.error("Error loading logs:", err);
+    res.status(500).send("Error loading logs");
+  }
+};
+
+exports.markSold = async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const result = await pool.query(
+      `UPDATE receipts
+       SET sold = TRUE
+       WHERE id = $1
+       RETURNING *`,
+      [id]
+    );
+
+    if (result.rowCount === 0) {
+      return res.status(404).send("Receipt not found");
+    }
+
+    await logAction(id, "SOLD", `Receipt ${id} marked as sold`);
+
+    res.json(result.rows[0]);
+  } catch (err) {
+    console.error("Error marking sold:", err);
+    res.status(500).send("Error marking as sold");
+  }
+};
+
+exports.markUnsold = async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const result = await pool.query(
+      `UPDATE receipts
+       SET sold = FALSE
+       WHERE id = $1
+       RETURNING *`,
+      [id]
+    );
+
+    if (result.rowCount === 0) {
+      return res.status(404).send("Receipt not found");
+    }
+
+    await logAction(id, "RETURN", `Receipt ${id} returned to inventory`);
+
+    res.json(result.rows[0]);
+  } catch (err) {
+    console.error("Error marking unsold:", err);
+    res.status(500).send("Error marking as unsold");
   }
 };
 
