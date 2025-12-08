@@ -1,5 +1,20 @@
-# Moon-Rocks
+# rockshop app
+## Project Details
+This is proof-of-concept project for a Express/Node/Javascript stack using postgresql as a backend database to store inventory information for Moon Mountain Gems or some other generic rockshop or even any inventory that has both per piece and by weight items.
+### Current Features
+- Web based interface
+- Inventory Page
+- Add New Entry Page
+- Sortable By KG, By Piece, Combined, and Sold item tables
+- Logging Page and Function
+- Postgres Database with a Receipts and Log tables
+- Docker Wrapper, for easy compatibility and demo of the system.
+### Explanation
+This is a forked version of the original repository for the rockshop app, due to me working on the app seperately from Hector, who developed very interesting imaging processes that I was unable to continue developing in my fork of the project. I have not been in contact with Kevin Hedmans, but I still want to acknowledge his original contributions.
+### YouTube Link to Demo
+Link: https://www.youtube.com/watch?v=RIHtnkVz70M
 
+## Original Repository Credits (Before Fork)
 ### Kevin Hedmans Contributions to the Project
 
 - Wrote code in **JavaScript**, **HTML**, and **CSS**.
