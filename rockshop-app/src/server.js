@@ -3,8 +3,8 @@ const express = require("express");
 const path = require("path");
 const dbRoutes = require("./routes/receipts");
 const { upload } = require("./middleware/uploads");
-const { extractCombinedFeatures, euclideanDistance } =
-  require("./services/features");
+
+
 
 const app = express();
 const PORT = process.env.PORT || 3000;

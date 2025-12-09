@@ -1,17 +1,13 @@
-# 🌑 Moon-Rocks / Rock-Shop Demo
+# 🌑 Rockshop App Demo
 
 A portable **Node + PostgreSQL** stack that lets rock-shop owners catalog, search, add, edit, and delete mineral inventory— all wrapped in Docker so it boots with a single command.
-
-<p align="center">
-  <img alt="screenshot" src="docs/screenshot.png" width="700">
-</p>
 
 ---
 
 ## Features
 
-* **PostgreSQL 16** with an example `minerals` table and seed data  
-* **Express 5** back-end (`/api/minerals`)  
+* **PostgreSQL 16** with an example `receipts` table and seed data  
+* **Express 5** back-end (`/api/receipts`)  
 * Static **Bootstrap 5** front-end (`public/`)  
 * One-click **Adminer** (DB UI) on port `8080`  
 * Works on Windows 10/11, macOS, Linux—anywhere Docker runs
@@ -32,8 +28,8 @@ A portable **Node + PostgreSQL** stack that lets rock-shop owners catalog, searc
 ## Quick-start
 
 ```bash
-git clone https://github.com/Mootwar/Moon-Rocks.git
-cd moon-rocks/rockshop-app
+git clone git@github.com:QuadeCSquared/rockshop.git
+cd rockshop/rockshop-app
 
 # Build & launch in background
 docker compose up --build # Add '-d' after '--build' to run in background. Use 'CTRL + C' to shutdown the docker when running not in the background
